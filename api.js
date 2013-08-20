@@ -9,4 +9,5 @@ http.get(url, function(res) {
   .pipe(process.stdout)
   ;
 });
-console.log(url);
+console.log('Hitting ' + url);
+console.log('Do other stuff while we wait ... ');
