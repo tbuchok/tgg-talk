@@ -1,4 +1,4 @@
-var User = require('./user');
+var User = require('./models/user');
 
 User.find({ id: 1 }, function(user) {
   console.log("1. " + user);
