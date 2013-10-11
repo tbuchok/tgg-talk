@@ -18,8 +18,7 @@ http.get(api.url(), function(res) {
 // We are not blocked, we can do other things:
 console.log('OTHER: Do other stuff while we wait ... \n');
 console.log('OTHER: 1 + 1: %s', 1 + 1);
-console.log('OTHER: Circle area with radius `4`: %s'
+console.log('OTHER: Circle area with radius `4`: %s \n'
             , Math.PI * Math.pow(2, 4));
-console.log('\n');
 
 
