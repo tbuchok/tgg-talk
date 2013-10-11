@@ -1,7 +1,15 @@
 var http = require('http')
   , timeout = Number(process.argv[2] || 0)
-  , url = 'http://slowapi.com/delay/' + timeout.toFixed(1);
+  , url = 'http://localhost:8000/delay/' + timeout.toFixed(1);
 ;
+
+http.createServer(function(req, res) {
+  var server = this;
+  setTimeout(function() {
+    res.end('Lorem ipsum dolor sit amet.');
+    server.close();
+  }, timeout * 1000);
+}).listen(8000);
 
 console.log('API: Hitting: %s \n', url);
 http.get(url, function(res) {
